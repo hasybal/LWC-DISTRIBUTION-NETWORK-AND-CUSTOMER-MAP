@@ -4,12 +4,12 @@ var map = new ol.Map({
     renderer: 'canvas',
     layers: layersList,
     view: new ol.View({
-        extent: [381982.147915, 717142.499164, 392157.189636, 721778.603324], maxZoom: 28, minZoom: 1
+        extent: [381830.955357, 717150.244960, 393510.531478, 722438.127791], maxZoom: 28, minZoom: 1
     })
 });
 
 //initial view - epsg:3857 coordinates if not "Match project CRS"
-map.getView().fit([381982.147915, 717142.499164, 392157.189636, 721778.603324], map.getSize());
+map.getView().fit([381830.955357, 717150.244960, 393510.531478, 722438.127791], map.getSize());
 
 ////small screen definition
     var hasTouchScreen = map.getViewport().classList.contains('ol-touch');
@@ -920,8 +920,8 @@ document.getElementsByClassName('gcd-gl-btn')[0].className += ' fa fa-search';
 //layer search
 
 var searchLayer = new SearchLayer({
-    layer: lyr_ACTIVECUSTOMERS_4,
-    colName: 'Cust Ref',
+    layer: lyr_ACTIVECUSTOMERS_1,
+    colName: 'CustRef',
     zoom: 10,
     collapsed: true,
     map: map
